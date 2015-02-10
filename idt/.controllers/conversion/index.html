@@ -1,0 +1,88 @@
+<div class="default conversion">
+
+    <div class="input-box">
+        <form method="POST">
+            <div class="radio">
+                <input type="radio" name="encode" id="encode-utf8" value="utf-8"<?php if ($this->encode == 'utf-8') { echo ' checked'; } ?>><label for="encode-utf8">UTF-8</label>
+                <input type="radio" name="encode" id="encode-euc" value="euc-jp"<?php if ($this->encode == 'euc-jp') { echo ' checked'; } ?>><label for="encode-euc">EUC-JP</label>
+                <input type="radio" name="encode" id="encode-sjis" value="sjis"<?php if ($this->encode == 'sjis') { echo ' checked'; } ?>><label for="encode-sjis">Shift-JIS</label>
+            </div>
+            <textarea class="box-max-width" name="value" rows="3" wrap="off"><?php echo $this->escape($this->value); ?></textarea>
+            <input class="box-max-width" type="text" name="option" placeholder="オプション値" value="<?php echo $this->escape($this->option); ?>">
+        </form>
+    </div>
+
+    <section>
+        <h2>暗号</h2>
+
+<?php foreach ($this->crypto as $instance) { ?>
+<?php
+          $enc = $instance->encode(mb_convert_encoding($this->value, $this->encode, CHARSET), $this->option);
+          $dec = mb_convert_encoding($instance->decode($this->value, $this->option), CHARSET, $this->encode);
+?>
+        <div class="box">
+            <div class="encode">
+                <span><?php echo $this->escape($instance->getEncodeName()); ?></span>
+                <span><textarea class="box-max-width flat" rows="<?php echo substr_count($enc, "\n") + 1; ?>" wrap="off" readonly><?php echo $this->escape($enc); ?></textarea></span>
+            </div>
+            <div class="decode">
+                <span><?php echo $this->escape($instance->getDecodeName()); ?></span>
+                <span><textarea class="box-max-width flat" rows="<?php echo substr_count($dec, "\n") + 1; ?>" wrap="off" readonly><?php echo $this->escape($dec); ?></textarea></span>
+            </div>
+        </div>
+
+<?php } ?>
+    </section>
+
+    <section>
+        <h2>ハッシュ</h2>
+
+<?php foreach ($this->hash as $instance) { ?>
+<?php
+          $val = $instance->hash(mb_convert_encoding($this->value, $this->encode, CHARSET), $this->option);
+?>
+        <div class="box">
+            <div class="hash">
+                <span><?php echo $this->escape($instance->getViewName()); ?></span>
+                <span><textarea class="box-max-width flat" rows="<?php echo substr_count($val, "\n") + 1; ?>" wrap="off" readonly><?php echo $this->escape($val); ?></textarea></span>
+            </div>
+        </div>
+
+<?php } ?>
+    </section>
+
+    <section>
+        <h2>変換</h2>
+
+<?php foreach ($this->convert as $instance) { ?>
+<?php
+          $val = $instance->convert(mb_convert_encoding($this->value, $this->encode, CHARSET), $this->option);
+?>
+        <div class="box">
+            <div class="hash">
+                <span><?php echo $this->escape($instance->getViewName()); ?></span>
+                <span><textarea class="box-max-width flat" rows="<?php echo substr_count($val, "\n") + 1; ?>" wrap="off" readonly><?php echo $this->escape($val); ?></textarea></span>
+            </div>
+        </div>
+
+<?php } ?>
+    </section>
+
+    <section>
+        <h2>エスケープ</h2>
+
+<?php foreach ($this->escape as $instance) { ?>
+<?php
+          $val = $instance->escape(mb_convert_encoding($this->value, $this->encode, CHARSET), $this->option);
+?>
+        <div class="box">
+            <div class="hash">
+                <span><?php echo $this->escape($instance->getViewName()); ?></span>
+                <span><textarea class="box-max-width flat" rows="<?php echo substr_count($val, "\n") + 1; ?>" wrap="off" readonly><?php echo $this->escape($val); ?></textarea></span>
+            </div>
+        </div>
+
+<?php } ?>
+    </section>
+
+</div>

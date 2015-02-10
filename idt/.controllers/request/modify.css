@@ -1,0 +1,64 @@
+body {
+    margin:0;
+}
+
+div.input-box {
+    border-bottom:2px solid #4be;
+}
+
+div.tabs {
+    margin:5px;
+}
+
+div.tabs input[type=radio] {
+    display:none;
+}
+div.tabs label {
+    display:inline-block;
+    padding:2px 5px;
+    border-radius:6px;
+    background:#ccc;
+    color:#fff;
+    cursor:pointer;
+}
+div.tabs input[type=radio]:checked + label {
+    background:#4be;
+}
+
+div.tab {
+    display:none;
+}
+
+table.block-line {
+    width:100%;
+    border-collapse: collapse;
+}
+table.block-line tr:nth-child(2n+1) th,
+table.block-line tr:nth-child(2n+1) td {
+    background:#e8e8e8;
+}
+table.block-line th {
+    width:200px;
+    padding-left:5px;
+    text-align:left;
+}
+table.block-line td {
+}
+
+
+pre.data {
+    margin:5px;
+}
+
+.syntaxhighlighter {
+    font-size:12px !important;
+    margin:0 !important;
+    width:auth !important;
+    overflow:visible !important;
+}
+.syntaxhighlighter table {
+    border:solid 1px #eee !important;
+}
+.syntaxhighlighter .line.alt2 {
+    background-color: #e8e8e8 !important;
+}

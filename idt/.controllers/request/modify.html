@@ -1,0 +1,15 @@
+<div class="default">
+    <div class="input-box">
+        <div class="tabs">
+            <input type="radio" name="tabs" id="info"><label for="info">通信詳細</label>
+            <input type="radio" name="tabs" id="request"><label for="request">リクエスト情報</label>
+            <input type="radio" name="tabs" id="response"><label for="response">レスポンス情報</label>
+            <input type="radio" name="tabs" id="html"><label for="html">ソースコード</label>
+        </div>
+    </div>
+
+    <div class="tab info"><?php echo $this->arrayToHtml($this->curlInfo); ?></div>
+    <div class="tab request"><pre class="data"><?php echo $this->escape($this->request); ?></pre></div>
+    <div class="tab response"><pre class="data"><?php echo $this->escape($this->response); ?></pre></div>
+    <div class="tab html"><pre class="brush:<?php echo $this->escape($this->contentType); ?>;toolbar:false;auto-links:false;"><?php echo $this->escape($this->source); ?></pre></div>
+</div>

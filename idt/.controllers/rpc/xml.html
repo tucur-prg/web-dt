@@ -1,0 +1,14 @@
+<div class="default">
+    <div class="input-box">
+        <form method="POST" action="rpc%3Asend/" target="rpc-iframe">
+            <input type="text" size="30" name="env" value="" placeholder="接続環境のIP or ホスト名">
+            <input type="text" size="30" name="message" value="" placeholder="プロトコルメッセージ">
+            <textarea class="box-max-width" rows="10" name="params"></textarea>
+            <input type="submit" value="送信">
+        </form>
+    </div>
+
+    <div class="rpc-view">
+        <iframe id="rpc-iframe" name="rpc-iframe"></iframe>
+    </div>
+</div>

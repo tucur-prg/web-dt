@@ -1,0 +1,74 @@
+.conversion textarea {
+    resize:none;
+}
+
+/** Input Box **/
+div.input-box {
+    padding:5px;
+    border-bottom:2px solid #4be;
+}
+div.input-box div.radio {
+    margin-bottom:3px;
+}
+div.input-box div.radio input[type=radio] {
+    display:none;
+}
+div.input-box div.radio label {
+    display:inline-block;
+    padding:2px 5px;
+    border-radius:6px;
+    background:#ccc;
+    color:#fff;
+    cursor:pointer;
+}
+div.input-box div.radio input[type=radio]:checked + label {
+    background:#4be;
+}
+
+div.input-box textarea,
+div.input-box input[type=text] {
+    margin:0;
+}
+
+/** Section **/
+section {
+    margin:5px;
+    border:2px solid #4be;
+}
+
+section h2 {
+    background:#4be;
+    color:#fff;
+    padding:2px;
+}
+
+/** Box **/
+div.box {
+    border:1px solid #4be;
+    margin:5px;
+}
+
+div.box div {
+    display:table;
+    width:100%;
+    border-bottom:1px solid #4be;
+}
+div.box div:last-child {
+    border:0;
+}
+
+div.box div span {
+    display:table-cell;
+    vertical-align:middle;
+    padding:0 5px;
+}
+div.box div span:first-child {
+    width:120px;
+    border-right:1px solid #4be;
+}
+
+div.box textarea {
+    position:relative;
+    top:1px;
+    overflow:hidden;
+}

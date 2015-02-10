@@ -1,0 +1,21 @@
+<div class="default image">
+
+    <div class="input-box">
+        <form method="POST">
+            <input class="box-max-width" type="text" name="url" placeholder="画像URL" value="<?php echo $this->escape($this->url); ?>">
+        </form>
+    </div>
+
+    <div class="block">
+        <img class="exif" src="<?php echo $this->escape($this->imgScheme); ?>">
+    </div>
+
+    <div class="block">
+        <table class="exif-data"></table>
+    </div>
+
+    <div class="block">
+        <textarea rows="10" class="scheme box-max-width" readonly><?php echo $this->escape($this->imgScheme); ?></textarea>
+    </div>
+
+</div>

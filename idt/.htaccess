@@ -1,0 +1,29 @@
+
+SetEnv PHP_WEBROOT '/data/web/default/idt'
+
+# タグ表示
+php_flag short_open_tag off
+php_flag magic_quotes_gpc off
+
+# 文字コードを定義
+php_value mbstring.internal_encoding "UTF-8"
+
+# パスを通す
+php_value include_path ".:/data/web/default/idt"
+
+# PHP 事前実行
+php_value auto_prepend_file ".php/prepend.php"
+php_value auto_append_file ".php/append.php"
+
+# リライト設定
+RewriteEngine On
+
+RewriteRule .(css|js|map|png|gif|jpg|ico)$ - [L]
+
+RewriteRule ^(.*?):(.*?)/$ .controllers/$1/$2.php [NC,L]
+RewriteRule ^(.*?)/$ .controllers/$1/index.php [NC,L]
+RewriteRule ^$ .controllers/index.php [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ .controllers/error.php [NC,L]
