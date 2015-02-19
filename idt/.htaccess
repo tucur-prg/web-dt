@@ -1,5 +1,5 @@
 
-SetEnv PHP_WEBROOT '/data/web/default/idt'
+SetEnv PHP_WEBROOT '/home/developer/web-dt/idt'
 
 # タグ表示
 php_flag short_open_tag off
@@ -9,7 +9,7 @@ php_flag magic_quotes_gpc off
 php_value mbstring.internal_encoding "UTF-8"
 
 # パスを通す
-php_value include_path ".:/data/web/default/idt"
+php_value include_path ".:/home/developer/web-dt/idt"
 
 # PHP 事前実行
 php_value auto_prepend_file ".php/prepend.php"
