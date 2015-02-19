@@ -54,7 +54,7 @@ class JWT
      */
     public static function decode($jwt, $key = null, $verify = true)
     {
-        $arr = explode(self::SEPARATOR, $jwt)
+        $arr = explode(self::SEPARATOR, $jwt);
 
         $header64    = isset($arr[0]) ? $arr[0] : null;
         $payload64   = isset($arr[1]) ? $arr[1] : null;
