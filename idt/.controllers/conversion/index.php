@@ -1,8 +1,8 @@
 <?php
 
-$view->encode = isset($_POST['encode']) ? (string) $_POST['encode'] : CHARSET;
-$view->value  = (string) $_POST['value'];
-$view->option = (string) $_POST['option'];
+$view->encode = (string) Request::post('encode', CHARSET);
+$view->value  = (string) Request::post('value');
+$view->option = (string) Request::post('option');
 
 $view->crypto  = new Container_Utils();
 $view->hash    = new Container_Utils();

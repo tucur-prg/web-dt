@@ -7,6 +7,11 @@ class View
     private $dir        = '';
     private $controller = '';
 
+    public function get($key)
+    {
+        return isset($this->{$key}) ? $this->{$key} : null;
+    }
+
     public function setDir($dir)
     {
         $this->dir = rtrim($dir, '/');

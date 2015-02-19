@@ -1,7 +1,7 @@
 <?php
 
-$view->connection = (string) $_POST['connection'];
-$view->query      = (string) $_POST['query'];
+$view->connection = (string) Request::post('connection');
+$view->query      = (string) Request::post('query');
 
 list($up, $hd)         = explode('@', $view->connection);
 list($user, $passwd)   = explode(':', $up);

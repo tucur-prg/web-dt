@@ -16,7 +16,7 @@ foreach ($headers as $key => $value) {
     header("${key}: ${value}");
 }
 
-if (isset($view->layoutDisabled) && $view->layoutDisabled === true) {
+if ($view->get('layoutDisabled') === true) {
     echo $view->readContent();
     return;
 }
@@ -35,7 +35,7 @@ if (isset($view->layoutDisabled) && $view->layoutDisabled === true) {
 
 <body>
 
-<?php if (isset($view->layoutHeaderDisabled) && $view->layoutHeaderDisabled !== true) { ?>
+<?php if ($view->get('layoutHeaderDisabled') !== true) { ?>
 <script>
 $(function () {
     $('.ico-menu').click(function () {

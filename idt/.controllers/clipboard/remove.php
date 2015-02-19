@@ -1,5 +1,5 @@
 <?php
-$path = $_GET['path'];
+$path = Request::get('path');
 
 if (preg_match('!^[^/]+\.(png)$!', $path)) {
     @unlink(getenv('PHP_WEBROOT').'/.tmp/'.$path);

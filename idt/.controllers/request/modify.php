@@ -10,7 +10,7 @@ Tag_Script::getInstance()->addFile('assets/syntaxhighlighter/scripts/shBrushXml.
 
 $view->layoutHeaderDisabled = true;
 
-$url = (string) $_POST['url'];
+$url = (string) Request::post('url');
 
 $modify = array(
     'header' => array(),

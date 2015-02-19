@@ -6,7 +6,7 @@ $view->modifyType = array(
     'cookie',
 );
 
-$view->url = (string) $_POST['url'];
+$view->url = (string) Request::post('url');
 
 $modify = array(
     'header' => array(),
