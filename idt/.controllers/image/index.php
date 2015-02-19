@@ -1,7 +1,8 @@
 <?php
 Tag_Script::getInstance()->addFile('assets/jquery/plugin/exif.js');
 
-$view->url = (string) Request::post('url');
+$view->url       = (string) Request::post('url');
+$view->imgScheme = '';
 
 if (preg_match('!^https?://.*!', $view->url)) {
     $binaryImg = file_get_contents($view->url);

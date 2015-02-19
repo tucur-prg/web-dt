@@ -28,6 +28,6 @@ class Utils_Phpserialize extends Utils_Abstract implements Utils_Icrypto
     {
         list($value) = func_get_args();
 
-        return var_export(unserialize($value), true);
+        return var_export(@unserialize($value), true);
     }
 }

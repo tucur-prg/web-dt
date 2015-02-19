@@ -1,14 +1,10 @@
 document.onpaste = function (ev) {
-    var type = ev.clipboardData.types;
-
     for (var i = 0; i < ev.clipboardData.items.length; i++) {
         var data = ev.clipboardData.items[i];
         if (data.type == "image/png") {
             var fr = new FileReader();
 
             fr.onloadend = function() {
-//                $("#clip").attr('src', this.result);
-
                 $.post('clipboard%3Asave/', this.result, function (imgPath) {
                     location.href = imgPath;
                 });
