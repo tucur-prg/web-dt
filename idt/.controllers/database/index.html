@@ -1,0 +1,46 @@
+<div class="default database">
+    <div class="input-box">
+        <form method="POST" action="database/">
+            <input type="text" class="box-max-width" name="connection" value="<?php echo $this->escape($this->connection); ?>" placeholder="接続先 user:password@host/database">
+            <textarea class="box-max-width" name="query" rows="6" wrap="off" placeholder="実行クエリ（カンマ区切りで複数記載可能）"><?php echo $this->escape($this->query); ?></textarea>
+        </form>
+    </div>
+
+    <div class="input-box tabs">
+        <form>
+            <div class="radio">
+<?php foreach ($this->result as $i => $result) { ?>
+                <input type="radio" class="tab" name="tab" id="tab-<?php echo $this->escape($i); ?>" value="query-<?php echo $this->escape($i); ?>"><label for="tab-<?php echo $this->escape($i); ?>"><?php echo $this->escape(mb_strimwidth($result['query'], 0, 13, '...')); ?></label>
+<?php } ?>
+            </div>
+        </form>
+    </div>
+
+<?php foreach ($this->result as $i => $result) { ?>
+    <section class="result" jq-tab-bind="query-<?php echo $this->escape($i); ?>">
+        <h2><?php echo $this->escape($result['query']); ?></h2>
+        <div class="display">
+            <table>
+                <thead>
+                    <tr>
+<?php     foreach ($result['fields'] as $field) { ?>
+                        <th><?php echo $this->escape($field); ?></th>
+<?php     } ?>
+                    </tr>
+                </thead>
+                <tbody>
+<?php     foreach ($result['rows'] as $row) { ?>
+                    <tr>
+<?php         foreach ($row as $value) { ?>
+                        <td><?php echo $this->escape($value); ?></td>
+<?php         } ?>
+                    </tr>
+<?php     } ?>
+                </tbody>
+            </table>
+        </div>
+        <div class="footer"><?php echo ($result['count'] == 0 ? 'Empty set' : $result['count'] . ' rows in set'); ?> (<?php echo $this->escape($result['time']); ?> sec)</div>
+    </section>
+<?php } ?>
+
+</div>

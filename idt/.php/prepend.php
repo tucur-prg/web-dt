@@ -30,8 +30,8 @@ set_include_path(
 
 Header::getInstance()->add('Content-Type', 'text/html; charset='.strtoupper(CHARSET));
 
-Tag_Link::getInstance()->addStylesheet('ext/display.css');
-Tag_Script::getInstance()->addFile('ext/jquery/jquery-1.10.2.min.js');
+Tag_Link::getInstance()->addStylesheet('assets/display.css');
+Tag_Script::getInstance()->addFile('assets/jquery/jquery-1.10.2.min.js');
 
 $view = new View();
 

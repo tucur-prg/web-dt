@@ -15,6 +15,11 @@ header("${protocol} ${statusCode}");
 foreach ($headers as $key => $value) {
     header("${key}: ${value}");
 }
+
+if ($view->layoutDisabled === true) {
+    echo $view->readContent();
+    return;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -63,8 +68,10 @@ $(function () {
 
 <nav class="main hover-out hidden">
     <div><a href="conversion/">暗号/複合</a></div>
+    <div><a href="clipboard/">クリップボード</a></div>
     <div><a href="image/">画像解析</a></div>
     <div><a href="request/">リクエスト解析</a></div>
+    <div><a href="database/">DB Manager</a></div>
 </nav>
 <?php } ?>
 

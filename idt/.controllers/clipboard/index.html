@@ -1,0 +1,34 @@
+<div class="default clipboard">
+<?php if ($this->enabled) { ?>
+    <div class="toolbar">
+        <div class="in action">
+            <span class="button jq-new">新規</span>
+            <span class="button jq-save">保存</span>
+            <span class="button jq-delete">削除</span>
+            <span class="button jq-undo">←</span>
+            <span class="button jq-redo">→</span>
+        </div>
+
+        <div class="in color">
+            <span class="paletta on jq-line-color" jq-color="black"></span>
+            <span class="paletta jq-line-color" jq-color="blue"></span>
+            <span class="paletta jq-line-color" jq-color="red"></span>
+            <span class="paletta jq-line-color" jq-color="green"></span>
+        </div>
+
+        <div class="in line">
+            <span class="line on jq-line-width" jq-width="5">S</span>
+            <span class="line jq-line-width" jq-width="10">M</span>
+            <span class="line jq-line-width" jq-width="20">L</span>
+        </div>
+
+        <div class="in string">
+            <span class="string jq-string">A</span>
+        </div>
+    </div>
+
+    <canvas id="board" jq-img-path="<?php echo $this->escape($this->path); ?>"></canvas>
+<?php } else { ?>
+    <div class="head">画像を貼り付ける「Ctrl + V」</div>
+<?php } ?>
+</div>

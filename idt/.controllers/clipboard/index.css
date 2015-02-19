@@ -1,0 +1,88 @@
+div.head {
+    padding:10px;
+}
+
+
+
+canvas {
+    margin:6px;
+    cursor:default;
+}
+
+div.toolbar {
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}
+
+div.in {
+    display:inline-block;
+    padding:4px;
+}
+
+span.button {
+    display:inline-block;
+    padding:2px 6px;
+    border-radius:6px;
+    background:#4be;
+    color:#fff;
+
+    cursor:pointer;
+}
+
+span.paletta {
+    display:inline-block;
+    width:20px;
+    height:20px;
+
+    cursor:pointer;
+}
+
+span[jq-color="black"] {
+    background:black;
+}
+span[jq-color="blue"] {
+    background:blue;
+}
+span[jq-color="red"] {
+    background:red;
+}
+span[jq-color="green"] {
+    background:green;
+}
+
+span.line {
+    display:inline-block;
+    width:20px;
+    height:20px;
+
+    cursor:pointer;
+    text-align:center;
+}
+
+span.on {
+    border:2px solid #000;
+}
+
+span.string {
+    display:inline-block;
+    width:20px;
+    height:20px;
+
+    cursor:pointer;
+    text-align:center;
+}
+
+textarea.string {
+    position:absolute;
+}
+textarea.flat-text {
+    background:none;
+    border:1px solid #000;
+
+    outline:0;
+    margin:0;
+    padding:0;
+}

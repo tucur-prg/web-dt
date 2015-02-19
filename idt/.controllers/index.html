@@ -1,3 +1,23 @@
 <div class="default information">
-    <textarea class="box-max-width flat" rows="1" readonly><?php echo $this->escape($this->userAgent); ?></textarea>
+    <div class="box"><textarea class="box-max-width flat" rows="1" readonly><?php echo $this->escape($this->userAgent); ?></textarea></div>
+
+    <div class="box input-box">
+        <h2>クレジット番号</h2>
+        <form class="credit">
+            <div class="radio">
+                <input type="radio" name="first" id="first-0" value="0" checked> <label for="first-0">0</label>
+                <input type="radio" name="first" id="first-1" value="1"> <label for="first-1">1</label>
+                <input type="radio" name="first" id="first-2" value="2"> <label for="first-2">2</label>
+                <input type="radio" name="first" id="first-3" value="3"> <label for="first-3">3</label>
+                <input type="radio" name="first" id="first-4" value="4"> <label for="first-4">4</label>
+                <input type="radio" name="first" id="first-5" value="5"> <label for="first-5">5</label>
+                <input type="radio" name="first" id="first-6" value="6"> <label for="first-6">6</label>
+                <input type="radio" name="first" id="first-7" value="7"> <label for="first-7">7</label>
+                <input type="radio" name="first" id="first-8" value="8"> <label for="first-8">8</label>
+                <input type="radio" name="first" id="first-9" value="9"> <label for="first-9">9</label>
+            </div>
+            <input type="submit" value="生成">
+            <input type="text" class="flat" name="number" readonly>
+        </form>
+    </div>
 </div>

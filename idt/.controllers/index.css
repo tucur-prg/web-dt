@@ -2,3 +2,41 @@
     overflow:hidden;
     resize:none;
 }
+
+div.box {
+    margin:12px;
+}
+
+/** Input Box **/
+div.input-box form.credit label {
+    width:20px;
+    text-align:center;
+}
+
+div.input-box div.radio,
+div.input-box div.select {
+    margin-top:3px;
+    margin-bottom:3px;
+}
+
+
+div.input-box div.radio input[type=radio] {
+    display:none;
+}
+div.input-box div.radio label {
+    display:inline-block;
+    padding:2px 5px;
+    border-radius:6px;
+    background:#ccc;
+    color:#fff;
+    cursor:pointer;
+}
+div.input-box div.radio input[type=radio]:checked + label {
+    background:#4be;
+}
+
+div.input-box textarea,
+div.input-box input[type=text] {
+    margin:0;
+}
+

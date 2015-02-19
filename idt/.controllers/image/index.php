@@ -1,5 +1,5 @@
 <?php
-Tag_Script::getInstance()->addFile('ext/jquery/plugin/exif.js');
+Tag_Script::getInstance()->addFile('assets/jquery/plugin/exif.js');
 
 $view->url = (string) $_POST['url'];
 

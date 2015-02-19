@@ -1,12 +1,12 @@
 <?php
 
-Tag_Link::getInstance()->addStylesheet('ext/syntaxhighlighter/styles/shCore.css');
-Tag_Link::getInstance()->addStylesheet('ext/syntaxhighlighter/styles/shThemeDefault.css');
+Tag_Link::getInstance()->addStylesheet('assets/syntaxhighlighter/styles/shCore.css');
+Tag_Link::getInstance()->addStylesheet('assets/syntaxhighlighter/styles/shThemeDefault.css');
 
-Tag_Script::getInstance()->addFile('ext/syntaxhighlighter/scripts/shCore.js');
-Tag_Script::getInstance()->addFile('ext//syntaxhighlighter/scripts/shBrushCss.js');
-Tag_Script::getInstance()->addFile('ext//syntaxhighlighter/scripts/shBrushJScript.js');
-Tag_Script::getInstance()->addFile('ext//syntaxhighlighter/scripts/shBrushXml.js');
+Tag_Script::getInstance()->addFile('assets/syntaxhighlighter/scripts/shCore.js');
+Tag_Script::getInstance()->addFile('assets/syntaxhighlighter/scripts/shBrushCss.js');
+Tag_Script::getInstance()->addFile('assets/syntaxhighlighter/scripts/shBrushJScript.js');
+Tag_Script::getInstance()->addFile('assets/syntaxhighlighter/scripts/shBrushXml.js');
 
 $view->layoutHeaderDisabled = true;
 

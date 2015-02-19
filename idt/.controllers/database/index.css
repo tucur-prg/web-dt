@@ -1,0 +1,80 @@
+.database textarea {
+    resize:none;
+}
+
+/** Input Box **/
+div.input-box {
+    padding:5px;
+    border-bottom:2px solid #4be;
+}
+
+div.input-box div.radio input[type=radio] {
+    display:none;
+}
+div.input-box div.radio label {
+    display:inline-block;
+    padding:2px 5px;
+    border-radius:6px;
+    background:#ccc;
+    color:#fff;
+    cursor:pointer;
+}
+div.input-box div.radio input[type=radio]:checked + label {
+    background:#4be;
+}
+
+div.input-box textarea,
+div.input-box input[type=text] {
+    margin:0;
+}
+
+/** tabs **/
+div.tabs {
+}
+div.tabs span.tab {
+    display:inline-block;
+    background:#ccc;
+    color:#fff;
+}
+
+/** result **/
+section.result {
+x    display:none;
+
+    width:100%;
+}
+
+section.result h2 {
+    background:#4be;
+    color:#fff;
+}
+
+section.result div.display {
+    overflow-x:scroll;
+}
+
+section.result div.footer {
+    text-align:center;
+}
+
+section.result table {
+    empty-cells:show;
+    border-collapse:collapse;
+    border:0;
+}
+
+section.result td,
+section.result th {
+    white-space:nowrap;
+    padding:0 3px;
+    border-right:1px solid #4be;
+}
+
+section.result thead th {
+    background:#4be;
+    color:#fff;
+}
+
+section.result tbody tr:nth-child(even) {
+    background:#e0e0e0;
+}
