@@ -37,6 +37,12 @@ class Tag_Link
         return $this;
     }
 
+    public function add($attribute)
+    {
+        $this->links[] = $attribute;
+        return $this;
+    }
+
     public function clear()
     {
         $this->links = array();

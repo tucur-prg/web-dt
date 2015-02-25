@@ -30,6 +30,7 @@ set_include_path(
 
 Header::getInstance()->add('Content-Type', 'text/html; charset='.strtoupper(CHARSET));
 
+Tag_Link::getInstance()->add(array('rel' => 'shortcut icon', 'href' => 'assets/favicon.ico'))
 Tag_Link::getInstance()->addStylesheet('assets/display.css');
 Tag_Script::getInstance()->addFile('assets/jquery/jquery-1.10.2.min.js');
 
